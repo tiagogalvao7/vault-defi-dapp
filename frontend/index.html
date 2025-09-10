@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple DeFi Vault Dapp</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+
+        <!-- HEADER BOX -->
+        <div class="box">
+            <header class="app-header">
+                <h1>💰 Simple DeFi Vault Dapp</h1>
+                <button id="connectWalletButton">🔗 Connect Wallet</button>
+            </header>
+            <p id="walletAddress" class="wallet-address"></p>
+        </div>
+
+        <!-- ETH VAULT BOX -->
+        <div class="box">
+            <h2>💵 ETH Vault</h2>
+            <h4>Deposit and withdraw Ethereum from your vault</h4>
+            <p><label for="depositAmount">Amount(ETH)</label></p>
+            <p><input type="number" id="depositAmount" placeholder="0.0" /></p>
+
+            <div class="button-group">
+                <button id="depositButton" class="vault-button">Deposit ETH</button>
+                <button id="withdrawButton" class="vault-button">Withdraw ETH</button>
+            </div>
+
+            <div class="sub-box">
+                <h4>Your ETH balance in Vault:</h4>
+                <p id="vaultBalance">0.0 ETH</p>
+            </div>
+        </div>
+
+        <!-- ERC-20 VAULT BOX -->
+        <div class="box">
+            <h2>💳 ERC-20 Vault</h2>
+            <h4>Deposit and withdraw ERC-20 tokens from your vault</h4>
+
+            <p><label for="tokenAddress">Token Address</label></p>
+            <p><input type="text" id="tokenAddress" placeholder="0X..." /></p>
+
+            <p><label for="tokenAmount">Amount (Tokens)</label></p>
+            <p><input type="number" id="tokenAmount" placeholder="0.0" /></p>
+
+            <div class="button-group">
+                <button id="depositTokenButton" class="vault-button">Deposit Token</button>
+                <button id="withdrawTokenButton" class="vault-button">Withdraw Token</button>
+            </div>
+
+            <div class="sub-box">
+                <h4>Your Token balance in Vault:</h4>
+                <p id="tokenBalance">0.0 </p>
+            </div>
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="box">
+            <h2>ℹ️ Info</h2>
+            <h4>Connection and contract information</h4>
+
+            <p><label for="walletAddress">Wallet Address</label></p>
+            <p><input type="text" id="walletAddressInfo" placeholder="Not connected" /></p>
+
+            <p><label for="contractAddress">Contract Address</label></p>
+            <p><input type="text" id="contractAddress" placeholder="0.X..." /></p>
+
+            <p><label for="network">Network</label></p>
+            <p><input type="text" id="network" placeholder="" /></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

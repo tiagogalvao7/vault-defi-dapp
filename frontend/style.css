@@ -1,0 +1,149 @@
+/* Reset */
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    /* fundo preto */
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main Container */
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    /* centralizado */
+}
+
+/* Painel style box */
+.box {
+    background-color: #1e1e1e;
+    /* cinza escuro */
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(236, 229, 229, 0.6);
+    
+
+}
+
+/* Inputs dentro das boxes */
+.box input[type="number"], input[type="text"] {
+    width: calc(100% - 16px);
+    /* ocupam largura quase total da box */
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+/* Botões dentro das boxes (deposit/withdraw) */
+.box .vault-button {
+    width: calc(50% - 10px);
+    /* lado a lado */
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.box .vault-button:last-child {
+    margin-right: 0;
+}
+
+/* Agrupamento de botões (opcional, para flexbox) */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button-group .vault-button {
+    flex: 1;
+    /* ocupa metade da box automaticamente */
+}
+
+/* Header inside box */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-header h1 {
+    font-size: 1.4rem;
+}
+
+/* Wallet address */
+#walletAddress {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Connect Wallet Button (pequeno) */
+#connectWalletButton {
+    background: #2528dd;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: auto;
+    /* mantém pequeno */
+}
+
+#connectWalletButton:hover {
+    background: #0d6ec9;
+}
+
+/* Vault Buttons */
+#depositButton,
+#depositTokenButton {
+    background: #2528dd;
+    color: #fff;
+}
+
+#withdrawButton,
+#withdrawTokenButton {
+    background: #5b656e;
+    color: #fff;
+}
+
+.box .vault-button:hover {
+    background: #0d6ec9;
+}
+
+.sub-box {
+    background-color: #2a2a2a;
+    /* um cinza mais claro que o fundo da box principal */
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#vaultBalance {
+    color: #ffd700;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.5);
+}
+
+#tokenBalance {
+    color: #ffd700;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(255, 215, 0, 0.5);
+}
