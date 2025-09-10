@@ -1,57 +1,90 @@
-# Sample Hardhat 3 Beta Project (`mocha` and `ethers`)
+# 💰 Simple DeFi Vault Dapp
 
-This project showcases a Hardhat 3 Beta project using `mocha` for tests and the `ethers` library for Ethereum interactions.
+A simple decentralized application (dApp) that allows users to:
 
-To learn more about the Hardhat 3 Beta, please visit the [Getting Started guide](https://hardhat.org/docs/getting-started#getting-started-with-hardhat-3). To share your feedback, join our [Hardhat 3 Beta](https://hardhat.org/hardhat3-beta-telegram-group) Telegram group or [open an issue](https://github.com/NomicFoundation/hardhat/issues/new) in our GitHub issue tracker.
+- Deposit and withdraw **ETH** into a Vault (with simulated interest).
+- Deposit and withdraw **ERC-20 tokens**.
+- Check balances directly from the interface.
 
-## Project Overview
+---
 
-This example project includes:
+## 🚀 Features
 
-- A simple Hardhat configuration file.
-- Foundry-compatible Solidity unit tests.
-- TypeScript integration tests using `mocha` and ethers.js
-- Examples demonstrating how to connect to different types of networks, including locally simulating OP mainnet.
+- **ETH Vault**
 
-## Usage
+  - Deposit ETH into the smart contract.
+  - Withdraw ETH with simulated accrued interest.
+  - View stored ETH balance.
 
-### Running Tests
+- **ERC-20 Vault**
 
-To run all the tests in the project, execute the following command:
+  - Deposit ERC-20 tokens (e.g., MockDAI).
+  - Withdraw ERC-20 tokens.
+  - View stored token balance.
 
-```shell
-npx hardhat test
-```
+- **Info Panel**
+  - See connected wallet address.
+  - See deployed Vault contract address.
+  - Check current network (e.g., Sepolia Testnet).
 
-You can also selectively run the Solidity or `mocha` tests:
+---
 
-```shell
-npx hardhat test solidity
-npx hardhat test mocha
-```
+## 📸 Screenshots
 
-### Make a deployment to Sepolia
+### Wallet and ETH box
 
-This project includes an example Ignition module to deploy the contract. You can deploy this module to a locally simulated chain or to Sepolia.
+![Main View](frontend/screenshots/mainpage1.png)
 
-To run the deployment to a local chain:
+### Tokens + Contract Information
 
-```shell
-npx hardhat ignition deploy ignition/modules/Counter.ts
-```
+![List View](frontend/screenshots/mainpage2.png)
 
-To run the deployment to Sepolia, you need an account with funds to send the transaction. The provided Hardhat configuration includes a Configuration Variable called `SEPOLIA_PRIVATE_KEY`, which you can use to set the private key of the account you want to use.
+## 🛠️ Tech Stack
 
-You can set the `SEPOLIA_PRIVATE_KEY` variable using the `hardhat-keystore` plugin or by setting it as an environment variable.
+- **Frontend**: HTML, CSS, JavaScript
+- **Blockchain**: Solidity, Ethereum Testnet (Sepolia)
+- **Libraries**:
+  - [Ethers.js](https://docs.ethers.org/)
+  - [OpenZeppelin Contracts](https://openzeppelin.com/contracts/)
 
-To set the `SEPOLIA_PRIVATE_KEY` config variable using `hardhat-keystore`:
+---
 
-```shell
-npx hardhat keystore set SEPOLIA_PRIVATE_KEY
-```
+## 📦 Installation & Usage
 
-After setting the variable, you can run the deployment with the Sepolia network:
+1. Clone the repository:
 
-```shell
-npx hardhat ignition deploy --network sepolia ignition/modules/Counter.ts
-```
+   ```bash
+   git clone https://github.com/your-repo/simple-defi-vault.git
+   cd simple-defi-vault´
+   ```
+
+2. Install dependencies for smart contracts:
+
+   ```bash
+   npm install
+   ```
+
+3. Deploy contracts (using Hardhat or Remix):
+
+- `Vault.sol`
+- `MockDAI.sol`
+
+4. Copy the Vault contract address into app.js:
+
+   ```bash
+    const contractAddress = "0xYOUR_CONTRACT_ADDRESS";
+    const contractABI = [ ... ];
+   ```
+
+5. Open `index.html` in your browser.
+   Connect your wallet (MetaMask) and start interacting 🚀.
+
+---
+
+## 🧪 Testnet Tokens
+
+For testing ERC-20 deposits:
+
+- Deploy the `MockDAI` contract to Sepolia Testnet.
+- Mint tokens to your wallet.
+- Use the `MockDAI` contract address in the frontend input.
