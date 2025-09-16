@@ -54,8 +54,8 @@ A simple decentralized application (dApp) that allows users to:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo/simple-defi-vault.git
-   cd simple-defi-vault´
+   git clone https://github.com/tiagogalvao7/vault-defi-dapp.git
+   cd vault-defi-dapp´
    ```
 
 2. Install dependencies for smart contracts:
